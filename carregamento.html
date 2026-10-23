@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .tela-inicial {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 45px;
+            position: relative;
+            color: white;
+            text-align: center;
+            background: #111;
+        }
+
+        /* GIF de fundo */
+        .tela-inicial::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("img/Retrato\ Noir\ de\ Glamour\ Clássico.png") center / cover no-repeat;
+            z-index: 0;
+        }
+
+        .conteudo {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 45px;
+            margin-left: 50px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 5rem);
+            font-weight: normal;
+            letter-spacing: 3px;
+        }
+
+        .botao-menu {
+            width: 90px;
+            height: 90px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+            transition: 0.3s;
+        }
+
+        .botao-menu:hover {
+            background: white;
+            color: black;
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                letter-spacing: 1px;
+            }
+
+            .botao-menu {
+                width: 70px;
+                height: 70px;
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="tela-inicial">
+        <div class="conteudo">
+            <h1>SEJA BEM-VINDO</h1>
+
+            <a href="index.html"
+               class="botao-menu"
+               aria-label="Entrar no menu">
+                →
+            </a>
+        </div>
+    </main>
+</body>
+</html>

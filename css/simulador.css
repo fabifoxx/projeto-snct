@@ -1,0 +1,28 @@
+header{
+    background-color: #667436;
+    padding: 10px;
+    text-align: right;
+    color: white;
+    border-bottom: 0px;
+
+}
+h1 {
+    font-size: 35px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+margin: 0;
+background-color: #C6C954;
+}
+button {
+    background-color: #C6C954;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    align-items: center;
+    margin-right: 10px;}

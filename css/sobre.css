@@ -1,0 +1,282 @@
+/*h1{
+    font-size: 35px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h4{
+    font-size: 20px;
+    text-align:center;
+    margin-left:10%;
+    font-family: the seasoned, sans-serif;
+    color: rgb(233, 227, 227);
+}
+header{
+    background-color: #2a2a35;
+    padding: 10px;
+    text-align: right;
+    color: white;
+    border-bottom: 0px;
+
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-left: 400px;
+    margin-right: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#f0eadc;
+
+}
+article{
+    background-color: #2a2a35;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+
+ img{
+    margin-top: 75px;
+    margin-right: 10px;
+    padding: 5px;
+ }
+
+button {
+    background-color: #b98391;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+body{
+margin: 0;
+background-color: #b98391;
+}
+*/
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: #b98391;
+    color: #f0eadc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(42, 42, 53);
+    padding: 24px 20px 16px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, "Times New Roman", serif;
+    margin: 8px 0 20px;
+}
+
+header p {
+    margin: 0 auto 24px;
+    max-width: 900px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+button,
+nav a {
+    background-color: #b98391;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+     transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    
+}
+
+
+    button:hover {
+    background-color: #d49aae;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+
+nav a:hover {
+    background-color: #d49aae;
+    
+    
+}
+
+/* Conteúdo principal */
+article {
+    max-width: 1100px;
+    background-color: rgb(42, 42, 53);
+    width: calc(100% - 40px);
+
+    margin: 30px auto;
+    padding: 30px;
+
+    border-radius: 16px;
+    border: 1px solid rgba(243, 197, 233, 0.25);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.30);
+
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+/* Imagem e apresentação inicial */
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+ img{
+   float: left;
+    width: 40%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 28px 20px 0;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.30);
+ }
+
+.intro-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Títulos */
+h2 {
+    font-size: 23px;
+    text-align: center;
+    margin: 16px 0 24px;
+}
+
+h3 {
+    font-size: 21px;
+    text-align: center;
+    margin: 30px 0 20px;
+    color: #f0eadc;
+}
+
+/* Parágrafos */
+article p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0 0 18px;
+    color: #f0eadc;
+}
+
+/* Conteúdo expansível */
+details {
+    margin-top: 18px;
+}
+
+summary {
+    cursor: pointer;
+    color: #e5b6c2;
+    font-weight: bold;
+    margin: 14px 0;
+}
+
+summary:hover {
+    color: white;
+}
+
+details h3 {
+    margin-top: 24px;
+}
+
+/* Seções do artigo */
+.secao {
+    margin-top: 30px;
+}
+
+/* Simulador e outros elementos */
+.simulador {
+    margin-top: 30px;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    article {
+        padding: 20px;
+        margin: 12px;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .intro img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .intro-content {
+        width: 100%;
+    }
+
+    article p {
+        text-align: left;
+        font-size: 16px;
+    }
+
+
+}
