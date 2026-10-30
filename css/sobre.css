@@ -73,7 +73,7 @@ html {
 body {
     margin: 0;
 
-    background-color: #b98391;
+    background-color:  #9d8289;
     color: #f0eadc;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -112,13 +112,14 @@ nav {
 
 button,
 nav a {
-    background-color: #b98391;
+    background-color: #9d8289;
     color: white;
     padding: 12px 22px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 700;
     text-decoration: none;
     transition: background-color 0.2s ease;
      transition:
@@ -185,11 +186,12 @@ article {
     min-width: 0;
 }
 
-/* Títulos */
-h2 {
-    font-size: 23px;
-    text-align: center;
-    margin: 16px 0 24px;
+h4{
+    font-size: 20px;
+    text-align: justify;
+    margin: 30px 0 20px;
+    font-family: "The Seasoned", sans-serif;
+    color: rgb(233, 227, 227);
 }
 
 h3 {
@@ -205,7 +207,7 @@ article p {
     line-height: 1.7;
     text-align: justify;
     margin: 0 0 18px;
-    color: #f0eadc;
+    color: white;
 }
 
 /* Conteúdo expansível */
@@ -241,7 +243,7 @@ details h3 {
 /* Adaptação para telas menores */
 @media (max-width: 768px) {
     header {
-        padding: 20px 16px;
+        padding: 20px;
     }
 
     h1 {
@@ -249,32 +251,25 @@ details h3 {
         text-align: center;
     }
 
-    nav {
-        justify-content: center;
-    }
-
+  
     article {
-        padding: 20px;
-        margin: 12px;
+        padding: 30px;
+        margin: 20px;
     }
 
-    .intro {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+
+  .hedy-imagem {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 80%;
+        max-width: 300px;
     }
 
-    .intro img {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .intro-content {
-        width: 100%;
-    }
+    
 
     article p {
-        text-align: left;
+        text-align: justify;
         font-size: 16px;
     }
 

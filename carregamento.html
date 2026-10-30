@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/1e4132ded5b758096a7df006c687d46b.jpg" type="image/x-icon">
     <title>Tela Inicial</title>
 
     <style>
@@ -43,7 +44,7 @@
                     rgba(0, 0, 0, 0.55),
                     rgba(0, 0, 0, 0.55)
                 ),
-                url("img/Retrato\ Noir\ de\ Glamour\ Clássico.png") center / cover no-repeat;
+                url("img/Retrato\ Noir\ de\ Glamour\ Clássico.png")  60% center / cover no-repeat;
             z-index: 0;
         }
 
@@ -94,7 +95,11 @@
                 height: 70px;
                 font-size: 32px;
             }
-        }
+              .tela-inicial::before {
+              background-image: url("img/Retrato\ Noir\ de\ Glamour\ Clássico\ vertical.png");
+              background-size: cover;
+              background-position: center;
+        } }
     </style>
 </head>
 
