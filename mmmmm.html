@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Hedy Lamarr</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: #f1f5f9;
+            margin: 0;
+            padding: 30px 16px;
+        }
+
+        main {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #60a5fa;
+        }
+
+        .painel {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        select, button {
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        select {
+            background: #f8fafc;
+            color: #111827;
+        }
+
+        button {
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        .canal {
+            display: inline-block;
+            padding: 12px;
+            margin: 5px;
+            border-radius: 6px;
+            background: #334155;
+        }
+
+        .ativo {
+            background: #b91c1c;
+        }
+
+        .barra-fundo {
+            background: #334155;
+            height: 24px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 8px 0 18px;
+        }
+
+        .barra {
+            height: 100%;
+            width: 0%;
+            background: #22c55e;
+            transition: width 0.4s;
+        }
+
+        .resultado {
+            line-height: 1.8;
+        }
+
+        .nota {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Simulador de Hedy Lamarr</h1>
+
+    <p class="nota">
+        Compare uma transmissão em canal fixo com uma transmissão
+        que alterna entre quatro canais.
+    </p>
+<button onclick="window.location.href='index.html'"> Menu</button>
+            <button onclick="window.location.href='sobre.html'"> Sobre </button>
+            <button onclick="window.location.href='mmmmm.html'"> Simulador </button>
+             <button onclick="window.location.href='final.html'"> Conclusão </button>
+             <button onclick="window.location.href='carregamento.html'"> Início </button>
+      
+    <section class="painel">
+        <h2>Configuração</h2>
+
+        <label for="interferencia">
+            Escolha o canal com interferência:
+        </label>
+
+        <br>
+
+        <select id="interferencia">
+            <option value="1">Canal 1</option>
+            <option value="2">Canal 2</option>
+            <option value="3">Canal 3</option>
+            <option value="4">Canal 4</option>
+        </select>
+
+        <br>
+
+        <button onclick="simular()">
+            Iniciar simulação
+        </button>
+    </section>
+
+    <section class="painel">
+        <h2>Canais de comunicação</h2>
+        <div id="canais"></div>
+        <p id="mensagem" class="nota">
+            Escolha um canal e inicie a simulação.
+        </p>
+    </section>
+
+    <section class="painel">
+        <h2>Resultados</h2>
+
+        <p>Frequência fixa: <strong id="fixo">--</strong></p>
+        <div class="barra-fundo">
+            <div id="barraFixa" class="barra"></div>
+        </div>
+
+        <p>Salto de frequência: <strong id="salto">--</strong></p>
+        <div class="barra-fundo">
+            <div id="barraSalto" class="barra"></div>
+        </div>
+
+        <div id="detalhes" class="resultado"></div>
+    </section>
+
+    <section class="painel">
+        <h2>Como isso se relaciona com Hedy Lamarr?</h2>
+        <p class="nota">
+            Hedy Lamarr e George Antheil desenvolveram um sistema
+            de salto de frequência para dificultar a interferência
+            e a interceptação de comunicações por rádio.
+            Esta página representa o princípio de forma simplificada.
+        </p>
+    </section>
+</main>
+
+<script>
+    function simular() {
+        const interferido = Number(
+            document.getElementById("interferencia").value
+        );
+
+        const canais = [1, 2, 3, 4];
+        const total = 20;
+
+        let recebidasFixo = 0;
+        let recebidasSalto = 0;
+
+        const areaCanais = document.getElementById("canais");
+        areaCanais.innerHTML = "";
+
+        canais.forEach(canal => {
+            const elemento = document.createElement("span");
+
+            elemento.className = "canal";
+            elemento.textContent = "Canal " + canal;
+
+            if (canal === interferido) {
+                elemento.classList.add("ativo");
+            }
+
+            areaCanais.appendChild(elemento);
+        });
+
+        // Sistema A: todas as mensagens usam o canal 1.
+        for (let i = 0; i < total; i++) {
+            if (1 !== interferido) {
+                recebidasFixo++;
+            }
+        }
+
+        // Sistema B: alterna entre os quatro canais.
+        for (let i = 0; i < total; i++) {
+            const canalAtual = canais[i % canais.length];
+
+            if (canalAtual !== interferido) {
+                recebidasSalto++;
+            }
+        }
+
+        const taxaFixa = recebidasFixo / total * 100;
+        const taxaSalto = recebidasSalto / total * 100;
+
+        document.getElementById("fixo").textContent =
+            taxaFixa + "% (" + recebidasFixo + "/" + total + ")";
+
+        document.getElementById("salto").textContent =
+            taxaSalto + "% (" + recebidasSalto + "/" + total + ")";
+
+        document.getElementById("barraFixa").style.width =
+            taxaFixa + "%";
+
+        document.getElementById("barraSalto").style.width =
+            taxaSalto + "%";
+
+        document.getElementById("mensagem").textContent =
+            "O canal " + interferido + " está com interferência.";
+
+        document.getElementById("detalhes").innerHTML =
+            "Mensagens perdidas na frequência fixa: " +
+            (total - recebidasFixo) +
+            "<br>Mensagens perdidas no salto de frequência: " +
+            (total - recebidasSalto);
+    }
+</script>
+</body>
+</html>

@@ -73,6 +73,19 @@ html {
 body {
     margin: 0;
 
+    background-image:
+        linear-gradient(
+        rgba(157, 130, 137, 0.297),
+        #281924cc
+        ),
+        url("https://i.pinimg.com/originals/cf/88/99/cf889965c8db4cace0467ba17cbab3f6.gif");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
     background-color:  #9d8289;
     color: #f0eadc;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,7 +93,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: rgb(42, 42, 53);
+    background-color: #22222a;
     padding: 24px 20px 16px;
     text-align: center;
     color: white;
@@ -88,17 +101,19 @@ header {
 
 h1 {
     font-size: 35px;
+    margin-top: auto;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, "Times New Roman", serif;
-    margin: 8px 0 20px;
+    
 }
 
 header p {
-    margin: 0 auto 24px;
+
     max-width: 900px;
     text-align: center;
     font-size: 16px;
     line-height: 1.6;
+    margin-top: auto;
 }
 
 /* Navegação */
@@ -147,7 +162,7 @@ nav a:hover {
 /* Conteúdo principal */
 article {
     max-width: 1100px;
-    background-color: rgb(42, 42, 53);
+    background-color: #22222a;
     width: calc(100% - 40px);
 
     margin: 30px auto;
@@ -244,13 +259,14 @@ details h3 {
 @media (max-width: 768px) {
     header {
         padding: 20px;
+        
     }
 
     h1 {
         font-size: 30px;
         text-align: center;
     }
-
+    
   
     article {
         padding: 30px;
@@ -266,12 +282,23 @@ details h3 {
         max-width: 300px;
     }
 
-    
+    h3{ 
+        font-size: 17px;
+
+    }
+    h4{
+        font-size: 17px;
+
+    }
 
     article p {
         text-align: justify;
-        font-size: 16px;
+        font-size: 13px;
     }
+     
+    header p{
+    font-size: 13px;
 
+    }
 
 }
