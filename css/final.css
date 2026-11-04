@@ -54,16 +54,17 @@ header p {
 nav {
     text-align: center;
     padding: 15px 10px;
-    background-color: rgba(28, 8, 35, 0.85);
+    
 }
 
 button {
-    background-color: #b98391;
+    background-color:rgba(69, 3, 84, 0.94);
     color: white;
 
-    padding: 12px 22px;
+    padding: 12px;
     margin: 6px 5px;
-
+    
+    margin-right: 0%;
     border: none;
     border-radius: 8px;
 
@@ -83,13 +84,14 @@ button:active {
     transform: scale(0.97);
 }
 
+
+
 /* ===== CONTEÚDO PRINCIPAL ===== */
 article {
     background-color: rgba(69, 3, 84, 0.94);
 
     max-width: 1100px;
     width: calc(100% - 40px);
-
     margin: 35px auto;
     padding: 35px;
 
@@ -100,7 +102,16 @@ article {
 
     overflow-wrap: break-word;
 }
+img{
+      
+    max-width: 10%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 
+}
 /* ===== TÍTULOS ===== */
 article h2 {
     font-family: Cambria, Georgia, serif;
@@ -120,24 +131,13 @@ article p {
 }
 
 /* ===== IMAGENS ===== */
-.galeria {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 15px;
-    margin: 25px 0;
-}
-
-.galeria img {
-    width: calc(33.333% - 10px);
-    height: 250px;
-    object-fit: cover;
-    margin: 0;
+article img {
+    max-width: 100%;
+    height: auto;
     display: block;
-
+    margin: 20px auto;
     border-radius: 12px;
-    border: 1px solid rgba(243, 197, 233, 0.25);
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -164,7 +164,10 @@ article p {
     article h2 {
         font-size: 23px;
     }
-
+    nav {
+    text-align: center;
+    padding: 15px 10px;
+}
     article p {
         font-size: 15px;
         line-height: 1.7;
@@ -177,4 +180,19 @@ article p {
         font-size: 14px;
         margin: 5px 3px;
     }
+}
+
+.imagens-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.imagens-galeria img {
+    width: 30%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px 0;
 }
