@@ -1,3 +1,5 @@
+/* ===== TEMAS (cada página escolhe o seu pela classe no <body>) ===== */
+
 :root,
 .pagina-estilo {
     --fundo-cor: #000000;
@@ -36,12 +38,31 @@
 }
 
 
+.pagina-quiz {
+    --fundo-cor: #9d8289;
+    --fundo-topo: rgba(157, 130, 137, 0.297);
+    --fundo-base: #281924cc;
+    --fundo-imagem: url("https://i.pinimg.com/originals/cf/88/99/cf889965c8db4cace0467ba17cbab3f6.gif");
+    --texto-cor: #f5edf7;
+    --cabecalho-cor: #450354;
+    --artigo-cor: rgba(69, 3, 84, 0.94);
+    --botao-cor: #b98391;
+    --botao-raio: 8px;
+}
+
+
+/* ===== BASE (vale para todas as páginas) ===== */
+
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+[hidden] {
+    display: none !important;
 }
 
 body {
@@ -128,6 +149,7 @@ button:active {
 }
 
 
+/* ===== PÁGINA ESTILO ===== */
 
 .pagina-estilo header {
     padding: 10px;
@@ -187,6 +209,8 @@ button:active {
 }
 
 
+/* ===== PÁGINA FINAL ===== */
+
 .pagina-final header {
     padding: 35px 20px;
     text-align: center;
@@ -220,7 +244,8 @@ button:active {
     font-weight: 400;
 }
 
-.pagina-final article {
+.pagina-final article,
+.pagina-quiz article {
     margin: 35px auto;
     padding: 35px;
 }
@@ -362,6 +387,240 @@ button:active {
 }
 
 
+/* ===== PÁGINA QUIZ ===== */
+
+.pagina-quiz header {
+    padding: 52px 20px 44px;
+    text-align: center;
+    background-image: linear-gradient(135deg, #5a0a6e 0%, #450354 45%, #2b1033 100%);
+    border-bottom: 3px solid #d49aae;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.pagina-quiz header h1 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 5vw, 40px);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.pagina-quiz header h1::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin: 18px auto 0;
+    border-radius: 999px;
+    background-color: #d49aae;
+}
+
+.pagina-quiz header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.7;
+    color: #ecd3ea;
+}
+
+.pagina-quiz article {
+    max-width: 820px;
+}
+
+.pagina-quiz #progresso {
+    margin: 0 0 10px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e5b6c2;
+}
+
+.pagina-quiz progress {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 8px;
+    margin-bottom: 28px;
+    border: none;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.pagina-quiz progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.pagina-quiz progress::-webkit-progress-value {
+    background: #d49aae;
+    transition: width 0.4s ease;
+}
+
+.pagina-quiz progress::-moz-progress-bar {
+    background: #d49aae;
+}
+
+.pagina-quiz .questao h2 {
+    margin: 0 0 24px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: left;
+    color: #ffffff;
+}
+
+.pagina-quiz .questao label {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin-bottom: 12px;
+    padding: 14px 16px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(243, 197, 233, 0.25);
+    background-color: rgba(255, 255, 255, 0.05);
+
+    line-height: 1.6;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.pagina-quiz .questao label:hover {
+    background-color: rgba(212, 154, 174, 0.18);
+    border-color: #d49aae;
+    transform: translateX(4px);
+}
+
+.pagina-quiz .questao label:focus-within {
+    outline: 2px solid #d49aae;
+    outline-offset: 2px;
+}
+
+.pagina-quiz .questao input {
+    position: absolute;
+    opacity: 0;
+}
+
+.pagina-quiz .letra {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4c3651;
+    font-weight: 700;
+}
+
+.pagina-quiz .questao.respondida label {
+    cursor: default;
+}
+
+.pagina-quiz .questao.respondida label:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(243, 197, 233, 0.25);
+    transform: none;
+}
+
+.pagina-quiz .questao.respondida label:not(.certa):not(.errada) {
+    opacity: 0.55;
+}
+
+.pagina-quiz .questao.respondida label.certa {
+    background-color: rgba(46, 160, 90, 0.22);
+    border-color: #4ade80;
+}
+
+.pagina-quiz .questao.respondida label.certa .letra {
+    background-color: #2ea05a;
+}
+
+.pagina-quiz .questao.respondida label.errada {
+    background-color: rgba(220, 60, 80, 0.22);
+    border-color: #f87171;
+}
+
+.pagina-quiz .questao.respondida label.errada .letra {
+    background-color: #dc3c50;
+}
+
+.pagina-quiz .justificativa {
+    margin: 24px 0 0;
+    padding: 18px 20px;
+    border-left: 5px solid;
+    border-radius: 12px;
+    line-height: 1.7;
+    text-align: left;
+    animation: aparecer 0.4s ease;
+}
+
+.pagina-quiz .justificativa.acerto {
+    background-color: rgba(46, 160, 90, 0.18);
+    border-color: #4ade80;
+}
+
+.pagina-quiz .justificativa.erro {
+    background-color: rgba(220, 60, 80, 0.18);
+    border-color: #f87171;
+}
+
+.pagina-quiz .status {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.pagina-quiz button {
+    display: block;
+    margin: 28px 0 0 auto;
+    background-color: #b98391;
+}
+
+.pagina-quiz #resultado {
+    text-align: center;
+}
+
+.pagina-quiz #resultado h2 {
+    margin-top: 0;
+    font-family: Cambria, Georgia, serif;
+    font-size: 30px;
+}
+
+.pagina-quiz #pontuacao {
+    font-size: 20px;
+}
+
+.pagina-quiz #mensagem-final {
+    font-style: italic;
+    color: #e5b6c2;
+}
+
+.pagina-quiz #botao-refazer {
+    margin: 28px auto 0;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
 /* ===== TELAS MENORES (celular) ===== */
 
 @media (max-width: 768px) {
@@ -372,7 +631,8 @@ button:active {
     }
 
     .pagina-estilo article,
-    .pagina-final article {
+    .pagina-final article,
+    .pagina-quiz article {
         width: calc(100% - 24px);
         margin: 20px auto;
         padding: 20px;
@@ -463,5 +723,37 @@ button:active {
     .pagina-sobre article p {
         text-align: justify;
         font-size: 13px;
+    }
+
+    .pagina-quiz header {
+        padding: 34px 16px 30px;
+    }
+
+    .pagina-quiz header h1 {
+        font-size: 28px;
+    }
+
+    .pagina-quiz header p {
+        font-size: 15px;
+    }
+
+    .pagina-quiz .questao h2 {
+        font-size: 18px;
+    }
+
+    .pagina-quiz .questao label {
+        padding: 12px;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .pagina-quiz .letra {
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+    }
+
+    .pagina-quiz .status {
+        font-size: 16px;
     }
 }

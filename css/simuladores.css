@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #211b2b;
+    color: #f2e8d5;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 30px 8%;
+}
+
+/* HEADER SIMPLES */
+header {
+    padding: 25px 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #b98391;
+}
+
+header h1 {
+    color: #e4a6a6;
+    font-size: 32px;
+    margin-bottom: 20px;
+   
+    text-align: center;
+}
+
+.header-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-height: 130px;
+}
+
+.header-conteudo img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    margin-right: -20px;
+    border-radius: 50%;
+}
+
+.header-conteudo p {
+    max-width: 600px;
+    line-height: 1.7;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* CARDS DOS SIMULADORES */
+.simulador {
+    background-color: #392b43;
+    border: 2px solid #b98391;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.simulador h2 {
+    color: #e4a6a6;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+/* CONTEÚDO: IMAGEM + TEXTO */
+.simulador-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.simulador-conteudo img {
+    width: 35%;
+    max-width: 280px;
+    height: 190px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+.simulador-conteudo p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #f2e8d5;
+}
+
+/* BOTÕES */
+.simulador button {
+    margin-top: 25px;
+    background-color: #b98391;
+    color: #211b2b;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.simulador button:hover {
+    background-color: #e4a6a6;
+    transform: scale(1.05);
+}
+.botão button {
+    background-color: #b98391;
+    color: #211b2b;
+    border: 1px solid #450354;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 13px;
+    margin-top:0%;
+
+}
+
+.botão button:hover {
+    background-color: #450354;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+    body {
+        padding: 20px 5%;
+    }
+
+    .header-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-conteudo img {
+        margin: 0;
+    }
+
+    .simulador-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .simulador-conteudo img {
+        width: 85%;
+        max-width: 280px;
+        height: 170px;
+    }
+
+    .simulador-conteudo p {
+        width: 100%;
+    }
+
+    .botão {
+        gap: 8px;
+    }
+
+    .botão button {
+        padding: 9px 16px;
+        font-size: 14px;
+    }
+}
