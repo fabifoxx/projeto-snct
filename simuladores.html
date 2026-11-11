@@ -1,69 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/simuladores.css">
+    <title>Simuladores | Hedy Lamarr · SNCT</title>
+    <meta name="description" content="Simuladores interativos de salto de frequência e de interferência em canais, inspirados na invenção de Hedy Lamarr.">
+    <link rel="icon" href="img/hedy-sorrindo.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap">
+    <link rel="stylesheet" href="css/padrao.css">
 </head>
 <body>
-  
-<header>
-    <h1>Simuladores</h1>
 
-    <div class="header-conteudo">
-        <img src="img/baixados__39_-removebg-preview.png" alt="Ilustração de comunicação">
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="topo">
+        <a class="marca" href="index.html">Hedy Lamarr <span>SNCT · Ciência Delas</span></a>
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="carregamento.html">Início</a>
+            <a href="index.html">Menu</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="simuladores.html" aria-current="page">Simuladores</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="final.html">Conclusão</a>
+        </nav>
+    </header>
 
-        <p>
-            Explore os simuladores que demonstram os conceitos de
-            frequência e comunicação inspirados na invenção de Hedy Lamarr.
-        </p>
-    </div>
-</header>
- <nav class="botão">
- <button onclick="window.location.href='index.html'"> Menu</button>
-        <button onclick="window.location.href='sobre.html'"> sobre</button>
-          <button onclick="window.location.href='final.html'"> Conclusão </button>
-        <button onclick="window.location.href='carregamento.html'"> Início </button> 
+    <!-- ===== CAPA ===== -->
+    <section class="capa">
+        <p class="sobretitulo">Experimente</p>
+        <h1>Simuladores</h1>
+        <div class="apresentacao">
+            <img src="img/binoculos.png" alt="Ilustração de mulher observando com binóculos">
+            <p class="lead">Explore os simuladores que demonstram os conceitos de frequência e comunicação inspirados na invenção de Hedy Lamarr.</p>
+        </div>
+    </section>
 
-</nav>
-<div class="simulador">
-    <h2>Simulador de frequência em Frequency Hopping</h2>
+    <!-- ===== CONTEÚDO ===== -->
+    <main class="conteudo">
+        <article class="cartao simulador-item">
+            <img class="foto" src="img/simulador-salto.jpeg" alt="Ilustração retrô de comunicação pela internet">
+            <div>
+                <h2>Simulador de frequência em Frequency Hopping</h2>
+                <p>Demonstra a alternância sincronizada entre dois rádios em nove canais, dentro da faixa de 80 a 160 MHz, com velocidade de dois saltos por segundo. A simulação permite visualizar as mudanças de frequência e compreender o funcionamento do sistema Frequency Hopping.</p>
+                <div class="acoes">
+                    <a class="botao botao-cheio" href="simulador-salto.html">Abrir simulador</a>
+                </div>
+            </div>
+        </article>
 
-    <div class="simulador-conteudo">
-        <img src="img/581245895652182691.jpeg" alt="Simulação de Frequency Hopping">
+        <article class="cartao simulador-item">
+            <img class="foto" src="img/simulador-canais.jpeg" alt="Ilustração de duas pessoas conversando com balões de fala coloridos">
+            <div>
+                <h2>Simulador de frequência em canais</h2>
+                <p>Apresenta a transmissão de informações em quatro canais, simulando interferências e a consequente perda de mensagens. Através dos resultados, é possível observar como as interferências afetam a comunicação e comparar o desempenho dos diferentes canais.</p>
+                <div class="acoes">
+                    <a class="botao botao-cheio" href="simulador-canais.html">Abrir simulador</a>
+                </div>
+            </div>
+        </article>
+    </main>
 
-        <p>
-            Demonstra a alternância sincronizada entre dois rádios em nove
-            canais, dentro da faixa de 80 a 160 MHz, com velocidade de dois
-            saltos por segundo. A simulação permite visualizar as mudanças
-            de frequência e compreender o funcionamento do sistema Frequency Hopping.
-        </p>
-    </div>
-
-    <button onclick="window.location.href='simulador-gf.html'">
-        Clique aqui 
-    </button>
-</div>
-
-<div class="simulador">
-    <h2>Simulador de frequência em canais</h2>
-
-    <div class="simulador-conteudo">
-        <img src="img/1094585884437864075.jpeg" alt="Simulação de interferência">
-
-        <p>
-            Apresenta a transmissão de informações em quatro canais,
-            simulando interferências e a consequente perda de mensagens.
-            Através dos resultados, é possível observar como as interferências
-            afetam a comunicação e comparar o desempenho dos diferentes canais.
-        </p>
-    </div>
-
-    <button onclick="window.location.href='mmmmm.html'">
-        Clique aqui
-    </button>
-</div>
-
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <p><strong>Frequências, Interferências e a Comunicação</strong></p>
+        <p>Semana Nacional de Ciência e Tecnologia — Ciência Delas</p>
+        <p><small>Equipe: Valdir Lucas, Fabiana Batista e Gustavo Da Silva</small></p>
+    </footer>
 </body>
 </html>

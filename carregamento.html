@@ -1,118 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/1e4132ded5b758096a7df006c687d46b.jpg" type="image/x-icon">
-    <title>Tela Inicial</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            height: 100vh;
-            overflow: hidden;
-            font-family: Georgia, "Times New Roman", serif;
-        }
-
-        .tela-inicial {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 45px;
-            position: relative;
-            color: white;
-            text-align: center;
-            background: #111;
-        }
-
-        /* GIF de fundo */
-        .tela-inicial::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.55),
-                    rgba(0, 0, 0, 0.55)
-                ),
-                url("img/Retrato\ Noir\ de\ Glamour\ Clássico.png")  60% center / cover no-repeat;
-            z-index: 0;
-        }
-
-        .conteudo {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 45px;
-            margin-left: 50px;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 6vw, 5rem);
-            font-weight: normal;
-            letter-spacing: 3px;
-        }
-
-        .botao-menu {
-            width: 90px;
-            height: 90px;
-            border: 2px solid white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 42px;
-            transition: 0.3s;
-        }
-
-        .botao-menu:hover {
-            background: white;
-            color: black;
-            transform: scale(1.08);
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                letter-spacing: 1px;
-            }
-
-            .botao-menu {
-                width: 70px;
-                height: 70px;
-                font-size: 32px;
-            }
-              .tela-inicial::before {
-              background-image: url("img/Retrato\ Noir\ de\ Glamour\ Clássico\ vertical.png");
-              background-size: cover;
-              background-position: center;
-        } }
-    </style>
+    <title>Boas-vindas | Hedy Lamarr · SNCT</title>
+    <meta name="description" content="Seja bem-vindo ao projeto Frequências, Interferências e a Comunicação sobre Hedy Lamarr.">
+    <link rel="icon" href="img/hedy-sorrindo.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap">
+    <link rel="stylesheet" href="css/padrao.css">
 </head>
-
-<body>
+<body class="pagina-inicial">
     <main class="tela-inicial">
-        <div class="conteudo">
+        <div class="conteudo-inicial">
+            <p class="sobretitulo">Hedy Lamarr · Ciência Delas</p>
             <h1>SEJA BEM-VINDO</h1>
-
-            <a href="index.html"
-               class="botao-menu"
-               aria-label="Entrar no menu">
-                →
-            </a>
+            <a href="index.html" class="botao-entrar" aria-label="Entrar no menu">→</a>
         </div>
     </main>
 </body>

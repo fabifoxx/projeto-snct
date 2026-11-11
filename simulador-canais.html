@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Canais | Hedy Lamarr · SNCT</title>
+    <meta name="description" content="Compare uma transmissão em canal fixo com uma transmissão que alterna entre quatro canais com interferência.">
+    <link rel="icon" href="img/hedy-sorrindo.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap">
+    <link rel="stylesheet" href="css/padrao.css">
+</head>
+<body>
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="topo">
+        <a class="marca" href="index.html">Hedy Lamarr <span>SNCT · Ciência Delas</span></a>
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="carregamento.html">Início</a>
+            <a href="index.html">Menu</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="simuladores.html">Simuladores</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="final.html">Conclusão</a>
+        </nav>
+    </header>
+
+    <!-- ===== CAPA ===== -->
+    <section class="capa">
+        <p class="sobretitulo">Interferência • Canais</p>
+        <h1>Simulador de Frequência em Canais</h1>
+        <p class="lead">Compare uma transmissão em canal fixo com uma transmissão que alterna entre quatro canais.</p>
+    </section>
+
+    <!-- ===== CONTEÚDO ===== -->
+    <main class="conteudo">
+        <section class="cartao">
+            <h2 class="titulo-painel">Configuração</h2>
+            <div class="campo">
+                <label for="interferencia">Escolha o canal com interferência:</label>
+                <select id="interferencia">
+                    <option value="1">Canal 1</option>
+                    <option value="2">Canal 2</option>
+                    <option value="3">Canal 3</option>
+                    <option value="4">Canal 4</option>
+                </select>
+                <button id="botao-simular" class="botao-cheio">▶ Iniciar simulação</button>
+            </div>
+        </section>
+
+        <section class="cartao">
+            <h2 class="titulo-painel">Canais de comunicação</h2>
+            <div id="canais" class="canais"></div>
+            <p id="mensagem" class="nota">Escolha um canal e inicie a simulação.</p>
+        </section>
+
+        <section class="cartao">
+            <h2 class="titulo-painel">Resultados</h2>
+
+            <p class="resultado-linha">Frequência fixa: <strong id="fixo">--</strong></p>
+            <div class="barra-fundo">
+                <div id="barraFixa" class="barra"></div>
+            </div>
+
+            <p class="resultado-linha">Salto de frequência: <strong id="salto">--</strong></p>
+            <div class="barra-fundo">
+                <div id="barraSalto" class="barra"></div>
+            </div>
+
+            <p id="detalhes" class="nota"></p>
+        </section>
+
+        <section class="cartao">
+            <h2 class="titulo-painel">Como isso se relaciona com Hedy Lamarr?</h2>
+            <p class="nota">Hedy Lamarr e George Antheil desenvolveram um sistema de salto de frequência para dificultar a interferência e a interceptação de comunicações por rádio. Esta página representa o princípio de forma simplificada.</p>
+        </section>
+
+        <div class="acoes">
+            <a class="botao" href="simuladores.html">← Voltar aos simuladores</a>
+        </div>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <p><strong>Frequências, Interferências e a Comunicação</strong></p>
+        <p>Semana Nacional de Ciência e Tecnologia — Ciência Delas</p>
+        <p><small>Equipe: Valdir Lucas, Fabiana Batista e Gustavo Da Silva</small></p>
+    </footer>
+
+    <script src="js/simulador-canais.js" defer></script>
+</body>
+</html>

@@ -34,6 +34,20 @@
   let lastWidth = 0;
   let lastHeight = 0;
 
+
+  // Cores do gráfico: seguem o padrão visual do site (css/padrao.css).
+  const CORES = {
+    fundo: "#f8f2e7",
+    grade: "rgba(74,59,52,.10)",
+    canal: "rgba(201,154,154,.35)",
+    rotulo: "#76655b",
+    texto: "#4a3b34",
+    salto: "#5f7a5a",
+    fixo: "#a8473f",
+    fonte: "12px 'Special Elite', 'Courier New', monospace",
+    fonteMenor: "11px 'Special Elite', 'Courier New', monospace"
+  };
+
   const MAX_POINTS = 120;
   const FIXED_FREQ = 100;
 
@@ -88,8 +102,8 @@
     syncStatus.textContent = hopping ? "Sincronizados" : "Modo fixo";
     syncStatus.className = `value ${hopping ? "green" : ""}`;
     const status = running
-      ? (hopping ? '<span class="sync-dot"></span>Saltando em sincronia' : '<span class="sync-dot" style="background:var(--red)"></span>Transmitindo em frequência fixa')
-      : '<span class="sync-dot" style="background:#a6a3b0"></span>Pausado';
+      ? (hopping ? '<span class="sync-dot"></span>Saltando em sincronia' : '<span class="sync-dot fixo"></span>Transmitindo em frequência fixa')
+      : '<span class="sync-dot parado"></span>Pausado';
     txStatus.innerHTML = status;
     rxStatus.innerHTML = status;
     explanation.innerHTML = hopping
@@ -173,21 +187,21 @@
     const y = f => pad.top + ((yMax - f) / (yMax - yMin || 1)) * plotH;
 
     // Fundo do gráfico
-    ctx.fillStyle = "#22222c";
+    ctx.fillStyle = CORES.fundo;
     ctx.fillRect(0, 0, w, h);
 
     // Linhas horizontais e rótulos do eixo Y
-    ctx.font = "12px Arial";
+    ctx.font = CORES.fonte;
     ctx.textAlign = "right";
     ctx.textBaseline = "middle";
     const ticks = 5;
     for (let i = 0; i <= ticks; i++) {
       const freq = yMin + (yMax - yMin) * i / ticks;
       const yy = y(freq);
-      ctx.strokeStyle = "rgba(220,220,235,.12)";
+      ctx.strokeStyle = CORES.grade;
       ctx.lineWidth = 1;
       ctx.beginPath(); ctx.moveTo(pad.left, yy); ctx.lineTo(w - pad.right, yy); ctx.stroke();
-      ctx.fillStyle = "#c3bdc7";
+      ctx.fillStyle = CORES.rotulo;
       ctx.fillText(`${freq.toFixed(0)}`, pad.left - 9, yy);
     }
 
@@ -195,7 +209,7 @@
     const channels = channelFrequencies();
     channels.forEach(freq => {
       const yy = y(freq);
-      ctx.strokeStyle = "rgba(166,163,176,.18)";
+      ctx.strokeStyle = CORES.canal;
       ctx.setLineDash([3, 5]);
       ctx.beginPath(); ctx.moveTo(pad.left, yy); ctx.lineTo(w - pad.right, yy); ctx.stroke();
     });
@@ -207,15 +221,15 @@
     for (let i = 0; i <= 5; i++) {
       const t = xMin + (xMax - xMin) * i / 5;
       const xx = x(t);
-      ctx.strokeStyle = "rgba(220,220,235,.12)";
+      ctx.strokeStyle = CORES.grade;
       ctx.beginPath(); ctx.moveTo(xx, pad.top); ctx.lineTo(xx, h - pad.bottom); ctx.stroke();
-      ctx.fillStyle = "#c3bdc7";
+      ctx.fillStyle = CORES.rotulo;
       ctx.fillText(`${t.toFixed(1)} s`, xx, h - pad.bottom + 9);
     }
 
     // Títulos dos eixos
-    ctx.fillStyle = "#f5f0ed";
-    ctx.font = "12px Arial";
+    ctx.fillStyle = CORES.texto;
+    ctx.font = CORES.fonte;
     ctx.textAlign = "center";
     ctx.fillText("Tempo", pad.left + plotW / 2, h - 15);
     ctx.save();
@@ -225,7 +239,7 @@
     ctx.restore();
 
     // Linha vermelha de frequência fixa como referência/vulnerabilidade.
-    ctx.strokeStyle = "#ff5d67";
+    ctx.strokeStyle = CORES.fixo;
     ctx.lineWidth = 2;
     ctx.setLineDash([7, 5]);
     ctx.beginPath();
@@ -236,7 +250,7 @@
 
     // Trajetória da comunicação. Segmentos são conectados em cada salto.
     if (history.length) {
-      ctx.strokeStyle = hopping ? "#51d6a0" : "#ff5d67";
+      ctx.strokeStyle = hopping ? CORES.salto : CORES.fixo;
       ctx.lineWidth = 3;
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
@@ -254,21 +268,21 @@
       // Ponto atual destacado
       const last = history[history.length - 1];
       if (last.t >= xMin) {
-        ctx.fillStyle = hopping ? "#51d6a0" : "#ff5d67";
+        ctx.fillStyle = hopping ? CORES.salto : CORES.fixo;
         ctx.beginPath();
         ctx.arc(x(last.t), y(last.f), 5, 0, Math.PI * 2);
         ctx.fill();
-        ctx.strokeStyle = "#ffffff";
+        ctx.strokeStyle = CORES.texto;
         ctx.lineWidth = 1.5;
         ctx.stroke();
       }
     }
 
     // Rótulo de frequência fixa
-    ctx.fillStyle = "#ff7b83";
+    ctx.fillStyle = CORES.fixo;
     ctx.textAlign = "left";
     ctx.textBaseline = "bottom";
-    ctx.font = "11px Arial";
+    ctx.font = CORES.fonteMenor;
     ctx.fillText("Referência fixa: 100 MHz", pad.left + 6, y(FIXED_FREQ) - 5);
   }
 

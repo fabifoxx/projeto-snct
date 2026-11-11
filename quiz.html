@@ -1,322 +1,351 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz - Hedy Lamarr</title>
-  <link rel="stylesheet" href="quiz rs/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Hedy Lamarr · SNCT</title>
+    <meta name="description" content="Quiz com 11 questões sobre a vida e as ideias de Hedy Lamarr e o salto de frequência.">
+    <link rel="icon" href="img/hedy-sorrindo.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap">
+    <link rel="stylesheet" href="css/padrao.css">
 </head>
+<body>
 
-<body class="pagina-quiz">
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="topo">
+        <a class="marca" href="index.html">Hedy Lamarr <span>SNCT · Ciência Delas</span></a>
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="carregamento.html">Início</a>
+            <a href="index.html">Menu</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="simuladores.html">Simuladores</a>
+            <a href="quiz.html" aria-current="page">Quiz</a>
+            <a href="final.html">Conclusão</a>
+        </nav>
+    </header>
 
-  <header id="cabecalho">
-    <h1>Quiz: Hedy Lamarr</h1>
-    <p>Teste o que você aprendeu sobre a vida e as ideias de Hedy Lamarr.</p>
-  </header>
-  
-  <article id="quiz">
-    <p id="progresso"></p>
-    <progress id="barra-progresso" value="0"></progress>
-
-    <section class="questao" data-correta="A" hidden>
-      <h2>O que é uma frequência e qual é sua relação com o funcionamento do frequency hopping?</h2>
-
-      <label>
-        <input type="radio">
-        É a quantidade de vezes que uma onda realiza um ciclo por segundo, e sua variação permite alternar entre diferentes frequências de comunicação.
-      </label>
-      <label>
-        <input type="radio">
-        É a distância percorrida por uma onda, e sua variação permite aumentar o tamanho dos aparelhos.
-      </label>
-      <label>
-        <input type="radio">
-        É a intensidade de uma onda sonora, e sua variação impede qualquer tipo de interferência.
-      </label>
-      <label>
-        <input type="radio">
-        É a velocidade de um dispositivo eletrônico, e sua variação determina a duração de uma transmissão.
-      </label>
-
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        Frequência é o número de ciclos de uma onda por segundo; o frequency hopping alterna entre frequências.
-      </p>
+    <!-- ===== CAPA (some depois da 1ª questão) ===== -->
+    <section class="capa" id="cabecalho">
+        <p class="sobretitulo">Teste seus conhecimentos</p>
+        <h1>Quiz: Hedy Lamarr</h1>
+        <p class="lead">Teste o que você aprendeu sobre a vida e as ideias de Hedy Lamarr.</p>
     </section>
 
-    <section class="questao" data-correta="C" hidden>
-      <h2>A 24ª Semana Nacional de Ciência e Tecnologia (SNCT) tem como tema a valorização das mulheres na Ciência e na tecnologia. Considerando essa proposta, qual reflexão podemos fazer sobre a participação feminina nessas áreas?</h2>
+    <!-- ===== CONTEÚDO ===== -->
+    <main class="conteudo">
+        <article id="quiz" class="cartao quiz">
+            <p id="progresso"></p>
+            <progress id="barra-progresso" value="0"></progress>
 
-      <label>
-        <input type="radio">
-        As mulheres passaram a contribuir para a Ciência somente com o surgimento dos computadores modernos.
-      </label>
-      <label>
-        <input type="radio">
-        A participação feminina é importante, mas deve se limitar às áreas de Ciências Humanas.
-      </label>
-      <label>
-        <input type="radio">
-        As mulheres sempre foram capazes de produzir conhecimento científico, embora muitas de suas contribuições tenham recebido pouco reconhecimento.
-      </label>
-      <label>
-        <input type="radio">
-        As descobertas científicas relevantes são realizadas principalmente por homens, devido às diferenças de capacidade intelectual.
-      </label>
+            <section class="questao" data-correta="A" hidden>
+                <h2>O que é uma frequência e qual é sua relação com o funcionamento do frequency hopping?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        Reconhecer as mulheres na Ciência ajuda a combater a invisibilidade histórica de suas contribuições.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    É a quantidade de vezes que uma onda realiza um ciclo por segundo, e sua variação permite alternar entre diferentes frequências de comunicação.
+                </label>
+                <label>
+                    <input type="radio">
+                    É a distância percorrida por uma onda, e sua variação permite aumentar o tamanho dos aparelhos.
+                </label>
+                <label>
+                    <input type="radio">
+                    É a intensidade de uma onda sonora, e sua variação impede qualquer tipo de interferência.
+                </label>
+                <label>
+                    <input type="radio">
+                    É a velocidade de um dispositivo eletrônico, e sua variação determina a duração de uma transmissão.
+                </label>
 
-    <section class="questao" data-correta="B" hidden>
-      <h2>Como Hedy Lamarr e George Antheil utilizaram a ideia de sincronização para desenvolver um sistema de comunicação mais seguro?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    Frequência é o número de ciclos de uma onda por segundo; o frequency hopping alterna entre frequências.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        Criaram um aparelho que transmitia mensagens exclusivamente por ondas sonoras audíveis.
-      </label>
-      <label>
-        <input type="radio">
-        Inspiraram-se na sincronização de mecanismos, como os de um piano automático, para propor mudanças coordenadas de frequência entre transmissor e receptor.
-      </label>
-      <label>
-        <input type="radio">
-        Desenvolveram um sistema que utilizava fios para conectar diretamente os torpedos aos navios.
-      </label>
-      <label>
-        <input type="radio">
-        Criaram um sistema que eliminava a necessidade de transmitir sinais por ondas de rádio.
-      </label>
+            <section class="questao" data-correta="C" hidden>
+                <h2>A 24ª Semana Nacional de Ciência e Tecnologia (SNCT) tem como tema a valorização das mulheres na Ciência e na tecnologia. Considerando essa proposta, qual reflexão podemos fazer sobre a participação feminina nessas áreas?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        A proposta se inspirou na sincronização de mecanismos para coordenar mudanças de frequência.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    As mulheres passaram a contribuir para a Ciência somente com o surgimento dos computadores modernos.
+                </label>
+                <label>
+                    <input type="radio">
+                    A participação feminina é importante, mas deve se limitar às áreas de Ciências Humanas.
+                </label>
+                <label>
+                    <input type="radio">
+                    As mulheres sempre foram capazes de produzir conhecimento científico, embora muitas de suas contribuições tenham recebido pouco reconhecimento.
+                </label>
+                <label>
+                    <input type="radio">
+                    As descobertas científicas relevantes são realizadas principalmente por homens, devido às diferenças de capacidade intelectual.
+                </label>
 
-    <section class="questao" data-correta="D" hidden>
-      <h2>Embora Hedy Lamarr tenha contribuído para o desenvolvimento de uma tecnologia importante, sua imagem pública foi frequentemente associada a qual aspecto de sua carreira?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    Reconhecer as mulheres na Ciência ajuda a combater a invisibilidade histórica de suas contribuições.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        À sua atuação como engenheira-chefe de uma empresa de computadores.
-      </label>
-      <label>
-        <input type="radio">
-        À sua liderança em uma equipe de desenvolvimento de satélites.
-      </label>
-      <label>
-        <input type="radio">
-        À sua carreira como matemática e professora universitária.
-      </label>
-      <label>
-        <input type="radio">
-        À sua beleza e à sua carreira como atriz, enquanto suas contribuições científicas recebiam menos atenção.
-      </label>
+            <section class="questao" data-correta="B" hidden>
+                <h2>Como Hedy Lamarr e George Antheil utilizaram a ideia de sincronização para desenvolver um sistema de comunicação mais seguro?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        Hedy ficou conhecida principalmente pela carreira artística, enquanto sua contribuição científica recebeu menos atenção.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    Criaram um aparelho que transmitia mensagens exclusivamente por ondas sonoras audíveis.
+                </label>
+                <label>
+                    <input type="radio">
+                    Inspiraram-se na sincronização de mecanismos, como os de um piano automático, para propor mudanças coordenadas de frequência entre transmissor e receptor.
+                </label>
+                <label>
+                    <input type="radio">
+                    Desenvolveram um sistema que utilizava fios para conectar diretamente os torpedos aos navios.
+                </label>
+                <label>
+                    <input type="radio">
+                    Criaram um sistema que eliminava a necessidade de transmitir sinais por ondas de rádio.
+                </label>
 
-    <section class="questao" data-correta="C" hidden>
-      <h2>O frequency hopping, ou salto de frequência, foi proposto por Hedy Lamarr e George Antheil durante a Segunda Guerra Mundial. Qual era o objetivo original dessa tecnologia?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    A proposta se inspirou na sincronização de mecanismos para coordenar mudanças de frequência.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        Aumentar a velocidade dos aviões de combate por meio de sinais de rádio.
-      </label>
-      <label>
-        <input type="radio">
-        Facilitar a comunicação entre soldados sem a utilização de equipamentos eletrônicos.
-      </label>
-      <label>
-        <input type="radio">
-        Dificultar a interceptação e a interferência nos sinais de rádio utilizados para controlar torpedos.
-      </label>
-      <label>
-        <input type="radio">
-        Substituir completamente os sistemas de comunicação utilizados pelas forças militares.
-      </label>
+            <section class="questao" data-correta="D" hidden>
+                <h2>Embora Hedy Lamarr tenha contribuído para o desenvolvimento de uma tecnologia importante, sua imagem pública foi frequentemente associada a qual aspecto de sua carreira?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        A proposta buscava dificultar a interceptação e a interferência nos sinais de controle de torpedos.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    À sua atuação como engenheira-chefe de uma empresa de computadores.
+                </label>
+                <label>
+                    <input type="radio">
+                    À sua liderança em uma equipe de desenvolvimento de satélites.
+                </label>
+                <label>
+                    <input type="radio">
+                    À sua carreira como matemática e professora universitária.
+                </label>
+                <label>
+                    <input type="radio">
+                    À sua beleza e à sua carreira como atriz, enquanto suas contribuições científicas recebiam menos atenção.
+                </label>
 
-    <section class="questao" data-correta="A" hidden>
-      <h2>Imagine que dois rádios estejam se comunicando por uma frequência fixa e um terceiro aparelho tente transmitir um sinal na mesma frequência. O que pode acontecer?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    Hedy ficou conhecida principalmente pela carreira artística, enquanto sua contribuição científica recebeu menos atenção.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        O terceiro rádio pode causar interferência, dificultando ou interrompendo a comunicação entre os outros dois.
-      </label>
-      <label>
-        <input type="radio">
-        Os três rádios passam automaticamente a utilizar frequências diferentes.
-      </label>
-      <label>
-        <input type="radio">
-        O terceiro rádio aumenta a potência dos sinais dos outros aparelhos.
-      </label>
-      <label>
-        <input type="radio">
-        A comunicação torna-se necessariamente mais rápida e segura.
-      </label>
+            <section class="questao" data-correta="C" hidden>
+                <h2>O frequency hopping, ou salto de frequência, foi proposto por Hedy Lamarr e George Antheil durante a Segunda Guerra Mundial. Qual era o objetivo original dessa tecnologia?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        Dois sinais na mesma frequência podem interferir um no outro.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    Aumentar a velocidade dos aviões de combate por meio de sinais de rádio.
+                </label>
+                <label>
+                    <input type="radio">
+                    Facilitar a comunicação entre soldados sem a utilização de equipamentos eletrônicos.
+                </label>
+                <label>
+                    <input type="radio">
+                    Dificultar a interceptação e a interferência nos sinais de rádio utilizados para controlar torpedos.
+                </label>
+                <label>
+                    <input type="radio">
+                    Substituir completamente os sistemas de comunicação utilizados pelas forças militares.
+                </label>
 
-    <section class="questao" data-correta="B" hidden>
-      <h2>Atualmente, os princípios associados ao salto de frequência podem ser encontrados em tecnologias de comunicação sem fio. Qual alternativa apresenta exemplos relacionados a essa ideia?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    A proposta buscava dificultar a interceptação e a interferência nos sinais de controle de torpedos.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        Impressoras mecânicas, máquinas de escrever e calculadoras convencionais.
-      </label>
-      <label>
-        <input type="radio">
-        Bluetooth e determinados sistemas de comunicação por rádio que utilizam mudanças coordenadas de frequência.
-      </label>
-      <label>
-        <input type="radio">
-        Lâmpadas incandescentes, ventiladores e motores elétricos convencionais.
-      </label>
-      <label>
-        <input type="radio">
-        Telescópios ópticos, microscópios e instrumentos de medição de temperatura.
-      </label>
+            <section class="questao" data-correta="A" hidden>
+                <h2>Imagine que dois rádios estejam se comunicando por uma frequência fixa e um terceiro aparelho tente transmitir um sinal na mesma frequência. O que pode acontecer?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        O Bluetooth é um exemplo de tecnologia que utiliza salto de frequência.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    O terceiro rádio pode causar interferência, dificultando ou interrompendo a comunicação entre os outros dois.
+                </label>
+                <label>
+                    <input type="radio">
+                    Os três rádios passam automaticamente a utilizar frequências diferentes.
+                </label>
+                <label>
+                    <input type="radio">
+                    O terceiro rádio aumenta a potência dos sinais dos outros aparelhos.
+                </label>
+                <label>
+                    <input type="radio">
+                    A comunicação torna-se necessariamente mais rápida e segura.
+                </label>
 
-    <section class="questao" data-correta="D" hidden>
-      <h2>Qual foi a principal contribuição de Hedy Lamarr e George Antheil para a história da tecnologia?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    Dois sinais na mesma frequência podem interferir um no outro.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        A invenção do primeiro computador pessoal comercial.
-      </label>
-      <label>
-        <input type="radio">
-        A criação da internet e dos primeiros navegadores.
-      </label>
-      <label>
-        <input type="radio">
-        O desenvolvimento do primeiro telefone celular comercial.
-      </label>
-      <label>
-        <input type="radio">
-        A proposta de um sistema de comunicação por salto de frequência para dificultar interferências e interceptações.
-      </label>
+            <section class="questao" data-correta="B" hidden>
+                <h2>Atualmente, os princípios associados ao salto de frequência podem ser encontrados em tecnologias de comunicação sem fio. Qual alternativa apresenta exemplos relacionados a essa ideia?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        Hedy Lamarr e George Antheil propuseram um sistema de comunicação por salto de frequência.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    Impressoras mecânicas, máquinas de escrever e calculadoras convencionais.
+                </label>
+                <label>
+                    <input type="radio">
+                    Bluetooth e determinados sistemas de comunicação por rádio que utilizam mudanças coordenadas de frequência.
+                </label>
+                <label>
+                    <input type="radio">
+                    Lâmpadas incandescentes, ventiladores e motores elétricos convencionais.
+                </label>
+                <label>
+                    <input type="radio">
+                    Telescópios ópticos, microscópios e instrumentos de medição de temperatura.
+                </label>
 
-    <section class="questao" data-correta="C" hidden>
-      <h2>Por que o reconhecimento das contribuições de Hedy Lamarr é importante para a história da Ciência?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    O Bluetooth é um exemplo de tecnologia que utiliza salto de frequência.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        Porque demonstra que apenas pessoas famosas podem produzir descobertas científicas relevantes.
-      </label>
-      <label>
-        <input type="radio">
-        Porque comprova que a atuação artística é incompatível com a pesquisa científica.
-      </label>
-      <label>
-        <input type="radio">
-        Porque ajuda a dar visibilidade às contribuições de mulheres que foram subestimadas ou pouco reconhecidas na história da tecnologia.
-      </label>
-      <label>
-        <input type="radio">
-        Porque demonstra que as descobertas tecnológicas não dependem de pesquisa ou colaboração.
-      </label>
+            <section class="questao" data-correta="D" hidden>
+                <h2>Qual foi a principal contribuição de Hedy Lamarr e George Antheil para a história da tecnologia?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        Seu reconhecimento contribui para dar visibilidade às mulheres na história da tecnologia.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    A invenção do primeiro computador pessoal comercial.
+                </label>
+                <label>
+                    <input type="radio">
+                    A criação da internet e dos primeiros navegadores.
+                </label>
+                <label>
+                    <input type="radio">
+                    O desenvolvimento do primeiro telefone celular comercial.
+                </label>
+                <label>
+                    <input type="radio">
+                    A proposta de um sistema de comunicação por salto de frequência para dificultar interferências e interceptações.
+                </label>
 
-    <section class="questao" data-correta="A" hidden>
-      <h2>Qual alternativa explica melhor a relação entre a proposta de Hedy Lamarr e as tecnologias de comunicação utilizadas atualmente?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    Hedy Lamarr e George Antheil propuseram um sistema de comunicação por salto de frequência.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        Sua proposta contribuiu para o desenvolvimento histórico de técnicas de comunicação por salto de frequência, relacionadas a aplicações posteriores em sistemas sem fio.
-      </label>
-      <label>
-        <input type="radio">
-        Ela inventou diretamente todos os protocolos de comunicação utilizados pelos celulares atuais.
-      </label>
-      <label>
-        <input type="radio">
-        Sua proposta foi utilizada exclusivamente na indústria cinematográfica e não teve relação com comunicações.
-      </label>
-      <label>
-        <input type="radio">
-        Ela criou o primeiro satélite responsável por transmitir sinais de internet para todo o mundo.
-      </label>
+            <section class="questao" data-correta="C" hidden>
+                <h2>Por que o reconhecimento das contribuições de Hedy Lamarr é importante para a história da Ciência?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        A proposta integra a história das técnicas de comunicação por salto de frequência, embora não tenha criado diretamente as tecnologias atuais.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    Porque demonstra que apenas pessoas famosas podem produzir descobertas científicas relevantes.
+                </label>
+                <label>
+                    <input type="radio">
+                    Porque comprova que a atuação artística é incompatível com a pesquisa científica.
+                </label>
+                <label>
+                    <input type="radio">
+                    Porque ajuda a dar visibilidade às contribuições de mulheres que foram subestimadas ou pouco reconhecidas na história da tecnologia.
+                </label>
+                <label>
+                    <input type="radio">
+                    Porque demonstra que as descobertas tecnológicas não dependem de pesquisa ou colaboração.
+                </label>
 
-    <section class="questao" data-correta="B" hidden>
-      <h2>Em um experimento com três rádios, dois aparelhos utilizam um sistema sincronizado de salto de frequência, enquanto o terceiro tenta interferir na transmissão. Por que a comunicação entre os dois primeiros pode ser mais resistente a determinadas interferências?</h2>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    Seu reconhecimento contribui para dar visibilidade às mulheres na história da tecnologia.
+                </p>
+            </section>
 
-      <label>
-        <input type="radio">
-        Porque o sistema sincronizado elimina todas as ondas eletromagnéticas ao redor dos aparelhos.
-      </label>
-      <label>
-        <input type="radio">
-        Porque os dois aparelhos alternam entre frequências previamente coordenadas, dificultando que uma interferência em uma única frequência interrompa toda a comunicação.
-      </label>
-      <label>
-        <input type="radio">
-        Porque os aparelhos deixam de transmitir informações durante o experimento.
-      </label>
-      <label>
-        <input type="radio">
-        Porque o terceiro rádio perde automaticamente sua capacidade de transmitir sinais.
-      </label>
+            <section class="questao" data-correta="A" hidden>
+                <h2>Qual alternativa explica melhor a relação entre a proposta de Hedy Lamarr e as tecnologias de comunicação utilizadas atualmente?</h2>
 
-      <p class="justificativa" hidden>
-        <strong class="status"></strong>
-        A alternância coordenada de frequências pode dificultar determinadas interferências.
-      </p>
-    </section>
+                <label>
+                    <input type="radio">
+                    Sua proposta contribuiu para o desenvolvimento histórico de técnicas de comunicação por salto de frequência, relacionadas a aplicações posteriores em sistemas sem fio.
+                </label>
+                <label>
+                    <input type="radio">
+                    Ela inventou diretamente todos os protocolos de comunicação utilizados pelos celulares atuais.
+                </label>
+                <label>
+                    <input type="radio">
+                    Sua proposta foi utilizada exclusivamente na indústria cinematográfica e não teve relação com comunicações.
+                </label>
+                <label>
+                    <input type="radio">
+                    Ela criou o primeiro satélite responsável por transmitir sinais de internet para todo o mundo.
+                </label>
 
-    <button id="botao-proxima" hidden>Próxima</button>
-  </article>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    A proposta integra a história das técnicas de comunicação por salto de frequência, embora não tenha criado diretamente as tecnologias atuais.
+                </p>
+            </section>
 
-  <article id="resultado" hidden>
-    <h2>Fim do quiz!</h2>
-    <p id="pontuacao"></p>
-    <p id="mensagem-final"></p>
-  
-    <button id="botao-refazer">Refazer o quiz</button>
+            <section class="questao" data-correta="B" hidden>
+                <h2>Em um experimento com três rádios, dois aparelhos utilizam um sistema sincronizado de salto de frequência, enquanto o terceiro tenta interferir na transmissão. Por que a comunicação entre os dois primeiros pode ser mais resistente a determinadas interferências?</h2>
 
- <button onclick="window.location.href='final.html'"> Voltar</button>
-  </article>
+                <label>
+                    <input type="radio">
+                    Porque o sistema sincronizado elimina todas as ondas eletromagnéticas ao redor dos aparelhos.
+                </label>
+                <label>
+                    <input type="radio">
+                    Porque os dois aparelhos alternam entre frequências previamente coordenadas, dificultando que uma interferência em uma única frequência interrompa toda a comunicação.
+                </label>
+                <label>
+                    <input type="radio">
+                    Porque os aparelhos deixam de transmitir informações durante o experimento.
+                </label>
+                <label>
+                    <input type="radio">
+                    Porque o terceiro rádio perde automaticamente sua capacidade de transmitir sinais.
+                </label>
 
-  <script src="quiz rs/script.js"></script>
+                <p class="justificativa" hidden>
+                    <strong class="status"></strong>
+                    A alternância coordenada de frequências pode dificultar determinadas interferências.
+                </p>
+            </section>
+
+            <button id="botao-proxima" class="botao-cheio" hidden>Próxima</button>
+        </article>
+
+        <article id="resultado" class="cartao quiz resultado-quiz" hidden>
+            <h2 class="titulo-secao">Fim do quiz!</h2>
+            <p id="pontuacao"></p>
+            <p id="mensagem-final"></p>
+            <div class="acoes">
+                <button id="botao-refazer" class="botao-cheio">Refazer o quiz</button>
+                <a class="botao" href="final.html">← Voltar à conclusão</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <p><strong>Frequências, Interferências e a Comunicação</strong></p>
+        <p>Semana Nacional de Ciência e Tecnologia — Ciência Delas</p>
+        <p><small>Equipe: Valdir Lucas, Fabiana Batista e Gustavo Da Silva</small></p>
+    </footer>
+
+    <script src="js/quiz.js" defer></script>
 </body>
 </html>
